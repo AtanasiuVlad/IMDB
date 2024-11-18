@@ -1,0 +1,102 @@
+body
+{
+    background-color: #333333;
+}
+
+.dropdown a:hover 
+{
+    background-color: #ddd;
+}
+
+.menu
+{
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5px;
+    color: white;
+}
+
+.menu:hover
+{
+    background-color: rgb(54, 69, 79);
+    transition: 0.3s;
+    color: white;
+}
+
+label
+{
+    color: white;
+}
+
+.show 
+{
+    display: block;
+}
+.btn {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: var(--gap);
+    padding: 0.6rem;
+    cursor: pointer;
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: var(--shadow);
+    position: relative;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-right: 1px solid black;
+  }
+  
+.btn:hover
+{
+    background-color: #d1d1d1;
+    transition: 0.3s;
+}
+
+  .bx {
+    font-size: 1.1rem;
+  }
+  
+  
+  
+  .dropdown a {
+    display: flex;
+    align-items: center;
+    column-gap: var(--gap);
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .dropdown a:hover {
+    background-color: var(--color);
+    color: red;
+  }
+
+  .dropdown {
+    position: absolute;
+    width: 250px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    margin-top: 3.3rem;
+    background: white;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.5, 1);
+    transform: translateY(0.5rem);
+    visibility: hidden;
+    opacity: 0;
+    
+  }
+  
+  .show {
+    transform: translateY(0rem);
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .arrow {
+    transform: rotate(180deg);
+    transition: 0.2s ease;
+  }
