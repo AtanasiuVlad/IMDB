@@ -1,45 +1,57 @@
-<footer class="flex flex-col items-center w-6/12 gap-10">
-    <div class="flex">
-        <div class="flex text-2xl flex-col items-center gap-2 border-2 border-gray-600 rounded-xl pr-10 pl-10 pt-8 pb-5 mr-10">
-            <strong>Follow IMDb on social</strong>
-            <div class="flex pl-3">
-                <a class="menu" href="https://www.tiktok.com/@imdb" target="_blank"><img class="w-6 pt-3 pb-3" src="/public/images/tiktok-white-icon.png" alt="TikTok"/></a>
-                <a class="menu" href="https://www.instagram.com/imdb" target="_blank"><img class="w-12" src="/public/images/instagram-white-logo.png" alt="Instagram"/></a>
-                <a class="menu" href="https://x.com/imdb" target="_blank"><img class="w-6 pt-3" src="/public/images/X-white-logo.png" alt="Twitter"/></a>
-                <a class="menu" href="https://www.youtube.com/imdb" target="_blank"><img class="w-7 pt-3" src="/public/images/youtube-white-logo.png" alt="YouTube"/></a>
-                <a class="menu" href="https://www.facebook.com/imdb" target="_blank"><img class="w-9 pt-2" src="/public/images/facebook-white-logo.png" alt="Facebook"/></a>
+<div class="flex justify-center">
+    <footer class="flex flex-col items-center w-6/12 gap-10">
+        <div class="flex social-media-query">
+            <div id="social-links" class="flex text-2xl flex-col items-center gap-7 border-2 border-gray-600 rounded-xl pr-10 pl-10 pt-8 pb-5 mr-10" >
+                <strong>Follow IMDb on social</strong>
+                <div id="grid-container" class="flex pl-3">
+                    <a class="menu" href="https://www.tiktok.com/@imdb" target="_blank"><img class="w-12" src="/public/images/tiktok-white-icon.png" alt="TikTok"/></a>
+                    <a class="menu" href="https://www.instagram.com/imdb" target="_blank"><img class="w-14" src="/public/images/instagram-new.png" alt="Instagram"/></a>
+                    <a class="menu" href="https://x.com/imdb" target="_blank"><img class="w-12" src="/public/images/x-social-media-white-icon.png" alt="Twitter"/></a>
+                    <a class="menu" href="https://www.youtube.com/imdb" target="_blank"><img class="w-12" src="/public/images/youtube-white-logo.png" alt="YouTube"/></a>
+                    <a class="menu" href="https://www.facebook.com/imdb" target="_blank"><img class="w-12" src="/public/images/facebook-new.png" alt="Facebook"/></a>
+                </div>
             </div>
-        </div>
-        
-        <div class="flex text-2xl border-2 border-gray-600 rounded-xl pr-10 pl-10 pt-5 pb-5 ml-10">
-            <div class="flex flex-col pt-2 w-full">
-                <strong>Get the IMDb app</strong>
-                <span class="text-lg text-gray-300">For Android and iOS</span>
+            
+            <div id="hiddenElement" class="flex text-2xl border-2 border-gray-600 rounded-xl pr-10 pl-10 pt-5 pb-5 ml-10 qr-code ">
+                <div class="flex flex-col pt-2 w-full">
+                    <strong>Get the IMDb app</strong>
+                    <span class="text-lg text-gray-300">For Android and iOS</span>
+                </div>
+                <img class="w-12/12" src="public/images/QR-IMDb-app.png"/>
             </div>
-            <img class="w-4/12" src="public/images/QR-IMDb-app.png"/>
+            <button class="hide-elements-on-large-screens sign-in-redirect bg-yellow-400 rounded-xl h-14" style="width: 60%" onclick="myFunction()"><strong class="text-black text-xl">Sign In</strong></button>
+            <button class="hide-elements-on-large-screens bg-black rounded-2xl h-14" style="width: 60%"><strong class="text-xl">Use App</strong></button>
         </div>
-    </div>
+    
+        <div class="flex flex-wrap justify-center gap-5 ">
+            <a href="https://help.imdb.com/imdb" target="_blank" class=" text-xl flex justify-center hover:underline">Help <i class='bx bx-link-external pt-2'></i></a>
+            <a href="https://help.imdb.com/article/imdb/general-information/imdb-site-index/GNCX7BHNSPBTFALQ#so" target="_blank" class=" text-xl flex justify-center hover:underline">Site Index <i class='bx bx-link-external pt-2'></i></a>
+            <a href="https://pro.imdb.com/signup/index.html?rf=cons_tf_pro&u=http%3A%2F%2Fpro.imdb.com%2F%3Fref_%3Dcons_tf_pro%26rf%3Dcons_tf_pro" target="_blank" class=" text-xl flex justify-center hover:underline">IMDbPro <i class='bx bx-link-external pt-2'></i></a>
+            <a href="https://www.boxofficemojo.com/" target="_blank" class=" text-xl flex justify-center hover:underline">Box Office Mojo <i class='bx bx-link-external pt-2'></i></a>
+            <a href="https://developer.imdb.com/" target="_blank" class=" text-xl flex justify-center hover:underline">License IMDb Data <i class='bx bx-link-external pt-2'></i></a>
+            <a href="https://www.imdb.com/pressroom/?ref_=ft_pr" target="_blank" class=" text-xl flex justify-center hover:underline">Press Room</a>
+            <a href="https://advertising.amazon.com/resources/ad-specs/imdb/" target="_blank" class=" text-xl flex justify-center hover:underline">Advertising <i class='bx bx-link-external pt-2'></i></a>
+            <a href="https://www.amazon.jobs/content/en/teams/imdb" target="_blank" class="pt-2 text-xl flex justify-center hover:underline">Jobs <i class='bx bx-link-external pt-2'></i></a>
+            <a href="https://www.imdb.com/conditions/?ref_=ft_cou" class="pt-2 text-xl flex justify-center hover:underline">Conditions of Use</a>
+            <a href="https://www.imdb.com/privacy/?ref_=ft_pvc" class="pt-2 text-xl flex justify-center hover:underline">Privacy Policy</a>
+            <a href="https://www.amazon.de/privacyprefs/imdb?oCT=ads&disableNav=true&locale=en_US&cmpRef=AYADeOo4qHx_wvfggcrcuc83aO8AagACABVhd3MtY3J5cHRvLXB1YmxpYy1rZXkAREFvOVlITTE4ek1ZV1
+                QveSt1b1h5MHU3bGZjZHErQ0pRRCtnS1lLd2VJNHVmS0FZVjB6a3N5K1hvNWZVVlRNemFLdz09AAZkb21haW4AATYAAQAHYXdzLWttcwBLYXJuOmF3czprbXM6dXMtZWFzdC0xOjI0ODMzMzc2NTMwMjprZXkvODEzOTI3M2YtYWRjOC
+                00YTFhLTgzN2EtYzMwYzIzNGZkNTgzALgBAgEAeCZ9xBCkwkcJ8WORctHEIaVR_MGhsPDOBpqE0qwlPsseAW2PBWN4s2CqO0NYEOt68hYAAAB-MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAy
+                01qHyNl6jMLBHYfUCARCAO5qIAXxiRjzgvf1emYFT-9dGr5oa1rKRfzy0JF_t6dlwYHh4ZHHinpfo4cVfqgIVx2GYSEGO6GJNZs1XAgAAAAAMAAAQAAAAAAAAAAAAAAAAAM92xVEtWYzTAIk4bTbOcR7_____AAAAAQAAAAAAAAAAAAAAA
+                QAAAHruZzxanpSBsQeejkWo3VqjKijZ-GcEbF-JVEW_Q4lhPojesxwWYqaE1xA8Fg3ZztXnIWjtEZw-KSNF4eBvRHjw_kjZRCdR2ouW7VXYZ7wA1vUy-db0p5CyC1NTvAu2RtEedjnkU43zt0ySWvCWmatp-DpYDhVBAPaxVkTmKObYMkR
+                xeBW3URmDjvcAZzBlAjEA7rVvChLvAl55LGCUeHkkhuZ5KIslRa4Fn4-dyhig6MvwvMlZghHzBWXlM6IlxMGIAjAHqYlvBew3_cx1lupsF7DXf6bhTzoolhB8jguGpZeMJRKeMn-1XLnRuIyQZoUeEaQ" 
+                class="text-xl flex justify-center hover:underline"><img class="w-14" src="/public/images/privacy-choices-icon.png"/><span class="pt-2"> Your Ads Privacy Choices</span>
+            </a>
+        </div>
+        <span class="flex justify-center text-lg w-80">an &nbsp;<img class="w-16 pt-3" src="public/images/amazon-logo.png"/>&nbsp; company</span>
+        <div class="text-gray-300 mb-10">© 1990-2025 by IMDb.com, Inc.</div>
 
-    <div class="flex flex-wrap justify-center gap-5 ">
-        <a href="https://help.imdb.com/imdb" target="_blank" class=" text-xl flex justify-center hover:underline">Help <i class='bx bx-link-external pt-2'></i></a>
-        <a href="https://help.imdb.com/article/imdb/general-information/imdb-site-index/GNCX7BHNSPBTFALQ#so" target="_blank" class=" text-xl flex justify-center hover:underline">Site Index <i class='bx bx-link-external pt-2'></i></a>
-        <a href="https://pro.imdb.com/signup/index.html?rf=cons_tf_pro&u=http%3A%2F%2Fpro.imdb.com%2F%3Fref_%3Dcons_tf_pro%26rf%3Dcons_tf_pro" target="_blank" class=" text-xl flex justify-center hover:underline">IMDbPro <i class='bx bx-link-external pt-2'></i></a>
-        <a href="https://www.boxofficemojo.com/" target="_blank" class=" text-xl flex justify-center hover:underline">Box Office Mojo <i class='bx bx-link-external pt-2'></i></a>
-        <a href="https://developer.imdb.com/" target="_blank" class=" text-xl flex justify-center hover:underline">License IMDb Data <i class='bx bx-link-external pt-2'></i></a>
-        <a href="https://www.imdb.com/pressroom/?ref_=ft_pr" target="_blank" class=" text-xl flex justify-center hover:underline">Press Room</a>
-        <a href="https://advertising.amazon.com/resources/ad-specs/imdb/" target="_blank" class=" text-xl flex justify-center hover:underline">Advertising <i class='bx bx-link-external pt-2'></i></a>
-        <a href="https://www.amazon.jobs/content/en/teams/imdb" target="_blank" class="pt-2 text-xl flex justify-center hover:underline">Jobs <i class='bx bx-link-external pt-2'></i></a>
-        <a href="https://www.imdb.com/conditions/?ref_=ft_cou" class="pt-2 text-xl flex justify-center hover:underline">Conditions of Use</a>
-        <a href="https://www.imdb.com/privacy/?ref_=ft_pvc" class="pt-2 text-xl flex justify-center hover:underline">Privacy Policy</a>
-        <a href="https://www.amazon.de/privacyprefs/imdb?oCT=ads&disableNav=true&locale=en_US&cmpRef=AYADeOo4qHx_wvfggcrcuc83aO8AagACABVhd3MtY3J5cHRvLXB1YmxpYy1rZXkAREFvOVlITTE4ek1ZV1
-            QveSt1b1h5MHU3bGZjZHErQ0pRRCtnS1lLd2VJNHVmS0FZVjB6a3N5K1hvNWZVVlRNemFLdz09AAZkb21haW4AATYAAQAHYXdzLWttcwBLYXJuOmF3czprbXM6dXMtZWFzdC0xOjI0ODMzMzc2NTMwMjprZXkvODEzOTI3M2YtYWRjOC
-            00YTFhLTgzN2EtYzMwYzIzNGZkNTgzALgBAgEAeCZ9xBCkwkcJ8WORctHEIaVR_MGhsPDOBpqE0qwlPsseAW2PBWN4s2CqO0NYEOt68hYAAAB-MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAy
-            01qHyNl6jMLBHYfUCARCAO5qIAXxiRjzgvf1emYFT-9dGr5oa1rKRfzy0JF_t6dlwYHh4ZHHinpfo4cVfqgIVx2GYSEGO6GJNZs1XAgAAAAAMAAAQAAAAAAAAAAAAAAAAAM92xVEtWYzTAIk4bTbOcR7_____AAAAAQAAAAAAAAAAAAAAA
-            QAAAHruZzxanpSBsQeejkWo3VqjKijZ-GcEbF-JVEW_Q4lhPojesxwWYqaE1xA8Fg3ZztXnIWjtEZw-KSNF4eBvRHjw_kjZRCdR2ouW7VXYZ7wA1vUy-db0p5CyC1NTvAu2RtEedjnkU43zt0ySWvCWmatp-DpYDhVBAPaxVkTmKObYMkR
-            xeBW3URmDjvcAZzBlAjEA7rVvChLvAl55LGCUeHkkhuZ5KIslRa4Fn4-dyhig6MvwvMlZghHzBWXlM6IlxMGIAjAHqYlvBew3_cx1lupsF7DXf6bhTzoolhB8jguGpZeMJRKeMn-1XLnRuIyQZoUeEaQ" 
-            class="text-xl flex justify-center hover:underline"><img class="w-14" src="/public/images/privacy-choices-icon.png"/><span class="pt-2"> Your Ads Privacy Choices</span>
-        </a>
-    </div>
-    <span class="flex justify-center text-lg w-80">an &nbsp;<img class="w-16 pt-3" src="public/images/amazon-logo.png"/>&nbsp; company</span>
-    <div class="text-gray-300 mb-10">© 1990-2025 by IMDb.com, Inc.</div>
-</footer>
+
+        
+        <script type="text/javascript">
+            function myFunction() {
+  location.href="https://www.imdb.com/registration/signin/?ref=nv_generic_lgin&u=%2F";
+}
+         </script>
+    </footer>
+</div>

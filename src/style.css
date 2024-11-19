@@ -1,6 +1,8 @@
 body
 {
     background-color: #333333;
+    border: 2px solid red;
+    margin-left: 200px;
 }
 
 .dropdown a:hover 
@@ -99,4 +101,67 @@ label
   .arrow {
     transform: rotate(180deg);
     transition: 0.2s ease;
+  }
+
+  
+
+  @media screen and (max-width: 1700px)
+  {
+    footer
+    {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-media-query{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .social-media-query div
+    {
+      margin: 0px;
+    }
+  }
+
+
+
+  @media screen and (max-width: 900px)
+  {
+    #grid-container{
+      display: grid;
+      grid-template-columns: 60px 60px 60px 60px 60px;
+    }
+
+    footer
+    {
+      display: flex;
+      min-width: 100%;
+    }
+
+    .qr-code
+    {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .social-media-query
+    {
+      display: flex;
+      align-items: center;
+    }
+
+    #social-links
+    {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 770px)
+  {
+
   }

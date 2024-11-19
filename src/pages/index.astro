@@ -6,7 +6,7 @@ import Test from "../components/Test.astro";
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png+xml" href="/public/images/IMDb ico.jpg" />
 		<link rel="stylesheet" href="src//style.css" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
@@ -68,14 +68,16 @@ import Test from "../components/Test.astro";
 			</nav>
 			
 			<button class="menu">IMDbPro</button>
-			<button class="menu">Watchlist</button>
-			<button class="menu">Sign In</button>
-			<button class="menu">Use App</button>
+			<button class="menu hide-on-small-screens">Watchlist</button>
+			<button class="menu hide-on-small-screens">Sign In</button>
+			<button class="menu hide-on-small-screens">Use App</button>
 		</header>
 		<Test></Test>
-		<section class="flex justify-center">
-			<Footer></Footer>
-		</section>
+		
+			<Footer>
+				<button class="text-4xl bg-yellow-500">Hello</button>
+			</Footer>
+
 		<script src="../script.js"></script>
 	</body>
 </html>
