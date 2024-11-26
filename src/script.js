@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
   // Dropdown for 'All' categories
 const dropdownBtn = document.getElementById("btn");
 const dropdownMenu = document.getElementById("dropdown");
@@ -33,13 +33,67 @@ const hiddenElement = document.getElementById('hiddenElement');
  
 
 // Hide elements with class 'hide-elements-on-large-screens'
-  const hideElements = document.getElementsByClassName('hide-elements-on-large-screens');
+  const hideElements = document.getElementsByClassName('hide-elements-on-1030px-screens');
+  const hide_at_730px = document.getElementsByClassName('hide-elements-on-730px-screens');
+  const show_at_730px = document.getElementsByClassName('show-on-730px-screens');
   const hideOnSmall = document.getElementsByClassName('hide-on-small-screens');
+  const invisibleOnSmall = document.getElementsByClassName('invisible-on-small-screens');
+  const resizeGap = document.getElementsByClassName('hide-gap'); 
 
     function ScreenSize() {
-      const SmallScreen = window.matchMedia('(max-width: 630px)').matches;
+      const SmallScreen = window.matchMedia('(max-width: 1030px)').matches;
+      const Size_730px = window.matchMedia('(max-width: 730px)').matches;
       let counter;
+      let counter_730px;
     
+      for(const element of invisibleOnSmall)
+      {
+        if(Size_730px)
+        {
+          element.style.visibility = 'hidden';
+        } else
+        {
+          element.style.visibility = 'visible';
+        }
+      }
+
+      for(const element of resizeGap)
+      {
+        if(Size_730px)
+        {
+          element.classList.remove('gap-9');
+        } else
+        {
+          element.classList.add('gap-9')
+        }
+      }
+
+      for(const element of hide_at_730px)
+      {
+        if(Size_730px)
+        {
+          element.classList.add('hidden');
+          counter_730px = true;
+        } else
+        {
+          element.classList.remove('hidden');
+          counter_730px = false;
+        }
+      }
+
+        for(const element of show_at_730px)
+        {
+          if(counter_730px)
+          {
+            element.classList.remove('hidden')
+          } else
+          {
+            element.classList.add('hidden');
+          }
+        }
+      
+
+
       // Loop through elements in the collection not just one item 
       for (const element of hideElements) {
         if (SmallScreen) {
@@ -67,7 +121,6 @@ const hiddenElement = document.getElementById('hiddenElement');
 
 
 // 'Sign In' button redirect
-function myFunction() {
-  location.href="https://www.imdb.com/registration/signin/?ref=nv_generic_lgin&u=%2F";
-}
+document.querySelector('.sign-in-redirect').addEventListener('click', function() {
+  location.href = "https://www.imdb.com/registration/signin/?ref=nv_generic_lgin&u=%2F";
 });

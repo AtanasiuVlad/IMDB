@@ -1,6 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar.astro";
 import Test from "../components/Test.astro";
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -17,66 +19,11 @@ import Test from "../components/Test.astro";
 		<title>IMDb: Ratings, Reviews, and Where to Watch the Best Movies & TV Shows</title>
 	</head>
 	<body class="text-white">
-		<header class="flex justify-center gap-9 m-0 border-0 bg-gray-800 pt-3 pb-3">
-			<img src="/public/images/IMDb ico.jpg"/>
+		<NavBar></NavBar>
 
-			<nav class="flex w-3/6">
-				<label class="menu flex gap-2">
-					<img class="mt-2 w-7 h-7" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAPdJREFUaEPtmEEOgzAMBMnP+/OUqqeqpVpky46d4UxY744TDOPY7Bqb+T0w3J04hCHcLAFauhnQLzsQhnCzBGjpZkA5tOSWnnPOlemPMSQv0k0voxheDDeEL4DQ0ot1qns5MmF35aQHYjgp+DBZCIdFnSQE4avgz1H6kQRFkj1Haak+mTCztJR73E3M0szS7wTu7GHpUIhr4k8l90Mry4i3rkzYWzjreRjOSj5KF8JRSWfpQPjPxwM/4rPa8pcuszSz9P1Zeq89vNJ+tdTCa8mSXoW1EK5AyVIjhC3pVVgL4QqULDVC2JJehbUQrkDJUiOELelVWPsEl+lAPQnNLZQAAAAASUVORK5CYII="/>
-					<button  class="mr-5 text-lg"><strong>Menu</strong></button>
-				</label>
-
-
-				<button class="btn bg-gray-200" id="btn">
-					<strong class="text-black">All</strong>
-					<i class="bx bx-chevron-down text-black" id="arrow"></i>
-				</button>
-				<div class="dropdown" id="dropdown">
-					<a href="#create">
-						<i class='bx bx-search text-black'></i>
-						&nbsp;All
-					  </a>
-					<a href="#create">
-						<i class='bx bxs-film'></i>
-					  &nbsp;Titles
-					</a>
-					<a href="#draft">
-					  <i class='bx bx-tv' ></i>
-					  &nbsp;TV Episodes
-					</a>
-					<a href="#move">
-					  <i class="bx bx-folder"></i>
-					  &nbsp;Celebs
-					</a>
-					<a href="#profile">
-					  <i class='bx bxs-buildings'></i>
-					  &nbsp;Companies
-					</a>
-					<a href="#notification" >
-						<i class='bx bxs-label'></i>
-					  &nbsp;Keywords
-					</a>
-					<a class="border-black border-t-2" href="#settings">
-						<i class='bx bx-file-find'></i>
-					  &nbsp;Advanced Search
-					</a>
-				  </div>
-				
-				
-				<input class="pl-3 w-3/4" placeholder="Search IMDb"/>
-				<button class="bg-white pr-3 rounded-r-lg"><i class='bx bx-search text-black'></i></button>
-			</nav>
-			
-			<button class="menu">IMDbPro</button>
-			<button class="menu hide-on-small-screens">Watchlist</button>
-			<button class="menu hide-on-small-screens">Sign In</button>
-			<button class="menu hide-on-small-screens">Use App</button>
-		</header>
-		<Test></Test>
+		<Test/>
 		
-			<Footer>
-				<button class="text-4xl bg-yellow-500">Hello</button>
-			</Footer>
+		<Footer/>
 
 		<script src="../script.js"></script>
 	</body>

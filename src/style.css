@@ -103,9 +103,25 @@ label
     transition: 0.2s ease;
   }
 
-  
+  .qr-code
+  {
+    width: 90%;
+  }
 
-  @media screen and (max-width: 1700px)
+  .box
+  {
+    width: 500px;
+  }
+
+@media screen and (min-width: 1090px)
+{
+  .qr-image
+  {
+    transform: translate(0, -10px);
+  }
+}
+
+  @media screen and (max-width: 1090px)
   {
     footer
     {
@@ -123,6 +139,11 @@ label
     {
       margin: 0px;
     }
+
+    .qr-image
+  {
+    transform: translate(0, -10px);
+  }
   }
 
 
@@ -159,9 +180,17 @@ label
       align-items: center;
       padding: 0;
     }
+
+    .qr-image
+  {
+    transform: translate(0, 0);
+  }
   }
 
-  @media screen and (max-width: 770px)
+  @media screen and (max-width: 510px)
   {
-
+    .box
+    {
+      width: 100%;
+    }
   }
