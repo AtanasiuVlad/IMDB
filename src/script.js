@@ -124,3 +124,47 @@ const hiddenElement = document.getElementById('hiddenElement');
 document.querySelector('.sign-in-redirect').addEventListener('click', function() {
   location.href = "https://www.imdb.com/registration/signin/?ref=nv_generic_lgin&u=%2F";
 });
+
+let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+
+        // Hide all slides
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; // No type assertion needed
+        }
+
+        // Remove active class from all dots
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        // Show the current slide
+        slides[slideIndex - 1].style.display = "block"; // No type assertion needed
+
+        // Set the current dot as active
+        dots[slideIndex - 1].className += " active";
+    }
+
+    // Add event listeners for dots
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.addEventListener('click', () => currentSlide(index + 1));
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
+    document.querySelector('.next').addEventListener('click', () => plusSlides(1));
