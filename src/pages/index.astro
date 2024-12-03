@@ -3,27 +3,41 @@ import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
 import PopularCelebrities from "../components/PopularCelebrities.astro";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png+xml" href="/public/images/IMDb ico.jpg" />
-		<link rel="stylesheet" href="src//style.css" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link 
-     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
-     rel="stylesheet"
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png+xml" href="/public/images/IMDb ico.jpg" />
+    <link rel="stylesheet" href="src//style.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
     />
-		<title>IMDb: Ratings, Reviews, and Where to Watch the Best Movies & TV Shows</title>
-	</head>
-	<body class="text-white">
-		<NavBar></NavBar>
+    <title>
+      IMDb: Ratings, Reviews, and Where to Watch the Best Movies & TV Shows
+    </title>
+  </head>
+  <body class="text-white">
+    <NavBar />
 
-		<PopularCelebrities/>
-		
-		<Footer/>
+    <PopularCelebrities />
 
-		<script src="../script.js"></script>
-	</body>
+    <Footer />
+
+    <div class="content">
+      <div class="bg-slate-500" style="height: 1000px;"></div>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup-content bg-red-600 bg-opacity-0" id="popupContent">
+        <button id="closePopup"
+          ><i class="bx bx-chevron-up" style="transform: translate(0, 2px);"
+          ></i> Back to top</button
+        >
+      </div>
+    </div>
+    <script src="../script.js"></script>
+  </body>
 </html>
