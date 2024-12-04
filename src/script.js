@@ -2,6 +2,7 @@
 const dropdownBtn = document.getElementById("btn");
 const dropdownMenu = document.getElementById("dropdown");
 const toggleArrow = document.getElementById("arrow");
+const dropdownItems = document.querySelectorAll('#dropdown a');
 
 const toggleDropdown = function () {
   dropdownMenu.classList.toggle("show");
@@ -11,6 +12,21 @@ const toggleDropdown = function () {
 dropdownBtn.addEventListener("click", function (e) {
   e.stopPropagation();
   toggleDropdown();
+});
+
+// Modify the text inside the button 
+dropdownItems.forEach(item => {
+    item.addEventListener('click', function() {
+      
+        const itemText = this.textContent.trim();
+        dropdownBtn.querySelector('strong').textContent = itemText;
+
+        dropdownItems.forEach(i => i.classList.remove('selected')); // Remains selected after being clicked 
+        this.classList.add('selected');
+
+        dropdownMenu.classList.remove("show");
+        toggleArrow.classList.remove("arrow"); 
+    });
 });
 
 // Hide QR Code when the max screen width is 630px
