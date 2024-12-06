@@ -330,3 +330,55 @@ label {
   font-weight: 500;
   padding-right: 6px;
 }
+
+/* -------- */
+.popupMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1f1f1f; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.popup-content-menu {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 170%;
+  height: 100%;
+  transform: translate(-250px, -10px);
+}
+
+.hidden {
+  display: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #facc15;
+  border: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding-bottom: 3px;
+}
+
+.list-container
+{
+  text-align: left;
+}

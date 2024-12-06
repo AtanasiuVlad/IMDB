@@ -236,3 +236,24 @@ window.addEventListener('scroll', () => {
 
     lastScrollY = currentScrollY;
 });
+
+// ----------------------------------------
+document.getElementById('menuButton').addEventListener('click', function() {
+  const popup = document.getElementById('popupMenu');
+  popup.classList.toggle('hidden');
+});
+
+document.getElementById('closeButton').addEventListener('click', function() {
+  const popup = document.getElementById('popupMenu');
+  popup.classList.add('hidden');
+});
+
+document.getElementById('menuButton').addEventListener('click', function() {
+  const popup = document.getElementById('popup');
+  popup.classList.toggle('hidden');
+});
+
+document.getElementById('closeButton').addEventListener('click', function() {
+  const popup = document.getElementById('popup');
+  popup.classList.add('hidden');
+});
